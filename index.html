@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+     <title>Color tester</title>
+   </head>
+   <body onload="setup()">
+     <form>
+       Text: <input type="text" id="text"/>
+     </form>
+     <table style='float: left; padding: 12px;'>
+          <tr id="paleta" bgcolor="blue" align="center">
+			 	 <td><b><font color="#FFFFFF">COLOR DEL CUADRO</font></b></td>
+			 </tr>
+     </table>
+	  <script type="text/javascript" charset="utf-8">
+
+       formElement = document.getElementById('text');
+       colorElement = document.getElementById('paleta');
+       formElement.addEventListener('input', function(e) {
+			colorElement.style.backgroundColor = this.value;
+		});
+
+     </script>
+   </body>
+</html>
